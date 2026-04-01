@@ -118,7 +118,7 @@ export default function Home() {
           <h1 style={{ fontSize: 40, fontWeight: 800, letterSpacing: -1, lineHeight: 1.15, marginBottom: 14 }}>
             <span style={{ color: t.text }}>Kecerdasan Artifisial &</span>
             <br />
-            <span style={{ background: `linear-gradient(135deg, ${t.accent}, ${t.accent2})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: `linear-gradient(135deg, ${t.accent}, ${t.accent2})`, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>
               Sains Data Dasar
             </span>
           </h1>
@@ -131,7 +131,6 @@ export default function Home() {
             {[
               { color: "#16a34a", label: `${MATERIALS.length} Materi Interaktif` },
               { color: "#d97706", label: "7 Minggu Perkuliahan" },
-              { color: "#5046e5", label: "Versi publik — materi saja" },
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: t.textMuted }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: item.color }} />
