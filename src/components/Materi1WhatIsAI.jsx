@@ -155,34 +155,43 @@ function AgentSection({ t }) {
       <STitle t={t} ic="🤖" title="Agen Cerdas" sub="Agen = entitas yang merasakan lingkungan lewat sensor, lalu bertindak lewat aktuator" />
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <div style={{ padding: "24px 16px", borderRadius: 18, background: t.card, border: `1px solid ${t.border}`, marginBottom: 16 }}>
-          <svg viewBox="0 0 640 300" style={{ width: "100%", height: "auto" }}>
+          <svg viewBox="0 0 680 340" style={{ width: "100%", height: "auto" }}>
             <defs>
               <marker id="ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill={t.violet}/></marker>
               <marker id="aa" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill={t.rose}/></marker>
-              <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill={t.dim}/></marker>
+              <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill={t.sub}/></marker>
             </defs>
-            <rect x="15" y="10" width="360" height="280" rx="22" fill="none" stroke={t.gold + "30"} strokeWidth="1.5"/>
-            <text x="195" y="40" textAnchor="middle" fill={t.gold} fontSize="13" fontWeight="800" letterSpacing="3">AGEN</text>
-            <rect x="430" y="10" width="195" height="280" rx="22" fill="none" stroke={t.teal + "25"} strokeWidth="1.5" strokeDasharray="8 4"/>
-            <text x="528" y="40" textAnchor="middle" fill={t.teal} fontSize="12" fontWeight="700" letterSpacing="2">LINGKUNGAN</text>
-            <text x="528" y="58" textAnchor="middle" fill={t.dim} fontSize="9">dunia luar agen</text>
-            <rect x="240" y="70" width="120" height="50" rx="12" fill={t.violet + "12"} stroke={t.violet + "40"} strokeWidth="1.5"/>
-            <text x="300" y="95" textAnchor="middle" fill={t.violet} fontSize="13" fontWeight="700">Sensor</text>
-            <text x="300" y="110" textAnchor="middle" fill={t.dim} fontSize="9">kamera, GPS, sonar</text>
-            <rect x="55" y="115" width="220" height="80" rx="16" fill={t.surface} stroke={t.borderLight} strokeWidth="1.5"/>
-            <text x="165" y="148" textAnchor="middle" fill={t.text} fontSize="12" fontWeight="700">Fungsi / Program Agen</text>
-            <text x="165" y="172" textAnchor="middle" fill={t.gold} fontSize="16" fontWeight="800" fontFamily="'Courier New', monospace">f : P* → A</text>
-            <rect x="240" y="210" width="120" height="50" rx="12" fill={t.rose + "12"} stroke={t.rose + "40"} strokeWidth="1.5"/>
-            <text x="300" y="235" textAnchor="middle" fill={t.rose} fontSize="13" fontWeight="700">Aktuator</text>
-            <text x="300" y="250" textAnchor="middle" fill={t.dim} fontSize="9">kemudi, gas, rem</text>
-            <line x1="430" y1="95" x2="365" y2="95" stroke={t.violet} strokeWidth="2.5" markerEnd="url(#ap)"/>
-            <rect x="375" y="76" width="60" height="18" rx="4" fill={t.violet + "15"}/>
-            <text x="405" y="89" textAnchor="middle" fill={t.violet} fontSize="9.5" fontWeight="700">Percepts</text>
-            <path d="M 270 120 Q 250 130 250 135 L 230 135" stroke={t.dim} strokeWidth="1.5" fill="none" markerEnd="url(#ag)"/>
-            <path d="M 230 195 Q 250 200 260 210" stroke={t.dim} strokeWidth="1.5" fill="none" markerEnd="url(#ag)"/>
-            <line x1="365" y1="235" x2="430" y2="235" stroke={t.rose} strokeWidth="2.5" markerEnd="url(#aa)"/>
-            <rect x="375" y="218" width="55" height="18" rx="4" fill={t.rose + "15"}/>
-            <text x="403" y="231" textAnchor="middle" fill={t.rose} fontSize="9.5" fontWeight="700">Actions</text>
+            {/* AGEN outer box */}
+            <rect x="15" y="10" width="400" height="320" rx="22" fill="none" stroke={t.gold + "30"} strokeWidth="1.5"/>
+            <text x="215" y="40" textAnchor="middle" fill={t.gold} fontSize="13" fontWeight="800" letterSpacing="3">AGEN</text>
+            {/* LINGKUNGAN outer box */}
+            <rect x="470" y="10" width="195" height="320" rx="22" fill="none" stroke={t.teal + "25"} strokeWidth="1.5" strokeDasharray="8 4"/>
+            <text x="568" y="40" textAnchor="middle" fill={t.teal} fontSize="12" fontWeight="700" letterSpacing="2">LINGKUNGAN</text>
+            <text x="568" y="58" textAnchor="middle" fill={t.dim} fontSize="9">dunia luar agen</text>
+            {/* Sensor box — top right of AGEN */}
+            <rect x="250" y="60" width="140" height="55" rx="12" fill={t.violet + "12"} stroke={t.violet + "40"} strokeWidth="1.5"/>
+            <text x="320" y="87" textAnchor="middle" fill={t.violet} fontSize="13" fontWeight="700">Sensor</text>
+            <text x="320" y="104" textAnchor="middle" fill={t.dim} fontSize="9">kamera, GPS, sonar</text>
+            {/* Fungsi / Program Agen — center left */}
+            <rect x="45" y="140" width="240" height="85" rx="16" fill={t.surface} stroke={t.borderLight} strokeWidth="1.5"/>
+            <text x="165" y="173" textAnchor="middle" fill={t.text} fontSize="12" fontWeight="700">Fungsi / Program Agen</text>
+            <text x="165" y="202" textAnchor="middle" fill={t.gold} fontSize="16" fontWeight="800" fontFamily="'Courier New', monospace">f : P* → A</text>
+            {/* Aktuator box — bottom right of AGEN */}
+            <rect x="250" y="250" width="140" height="55" rx="12" fill={t.rose + "12"} stroke={t.rose + "40"} strokeWidth="1.5"/>
+            <text x="320" y="277" textAnchor="middle" fill={t.rose} fontSize="13" fontWeight="700">Aktuator</text>
+            <text x="320" y="294" textAnchor="middle" fill={t.dim} fontSize="9">kemudi, gas, rem</text>
+            {/* Percepts arrow: Environment → Sensor */}
+            <line x1="470" y1="87" x2="395" y2="87" stroke={t.violet} strokeWidth="2.5" markerEnd="url(#ap)"/>
+            <rect x="405" y="73" width="60" height="20" rx="4" fill={t.violet + "15"}/>
+            <text x="435" y="87" textAnchor="middle" fill={t.violet} fontSize="9.5" fontWeight="700">Percepts</text>
+            {/* Internal arrow: Sensor → Fungsi */}
+            <path d="M 250 105 C 230 122, 270 135, 255 140" stroke={t.sub} strokeWidth="2" fill="none" markerEnd="url(#ag)"/>
+            {/* Internal arrow: Fungsi → Aktuator */}
+            <path d="M 255 225 C 270 240, 240 248, 250 255" stroke={t.sub} strokeWidth="2" fill="none" markerEnd="url(#ag)"/>
+            {/* Actions arrow: Aktuator → Environment */}
+            <line x1="395" y1="277" x2="470" y2="277" stroke={t.rose} strokeWidth="2.5" markerEnd="url(#aa)"/>
+            <rect x="405" y="263" width="55" height="20" rx="4" fill={t.rose + "15"}/>
+            <text x="433" y="277" textAnchor="middle" fill={t.rose} fontSize="9.5" fontWeight="700">Actions</text>
           </svg>
         </div>
 
