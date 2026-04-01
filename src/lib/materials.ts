@@ -1,0 +1,153 @@
+export interface Material {
+  slug: string;
+  week: number;
+  title: string;
+  subtitle: string;
+  icon: string;
+  color: string;
+  gradient: string;
+  topics: string[];
+  category: "foundations" | "data" | "models" | "evaluation";
+}
+
+export const MATERIALS: Material[] = [
+  {
+    slug: "what-is-ai",
+    week: 1,
+    title: "What is AI?",
+    subtitle: "Definisi, Agen Cerdas, Taksonomi AI",
+    icon: "🤖",
+    color: "#f0b440",
+    gradient: "from-amber-500/20 to-orange-600/20",
+    topics: ["Definisi AI (4 perspektif)", "Intelligent Agents & PEAS", "Task Environment", "Tipe Agen", "Taksonomi AI"],
+    category: "foundations",
+  },
+  {
+    slug: "search",
+    week: 1,
+    title: "Search Algorithms",
+    subtitle: "BFS, DFS, UCS, Greedy, A*",
+    icon: "🔍",
+    color: "#7b9bff",
+    gradient: "from-blue-500/20 to-indigo-600/20",
+    topics: ["BFS (Breadth-First)", "DFS (Depth-First)", "UCS (Uniform Cost)", "Greedy Best-First", "A* Search"],
+    category: "foundations",
+  },
+  {
+    slug: "data-science",
+    week: 2,
+    title: "Data Science",
+    subtitle: "Metodologi, Business Understanding, Case Studies",
+    icon: "📊",
+    color: "#45d4c8",
+    gradient: "from-teal-500/20 to-cyan-600/20",
+    topics: ["What is Data Science", "CRISP-DM Methodology", "Business Understanding", "AI/DS Case Studies"],
+    category: "data",
+  },
+  {
+    slug: "eda-visualization",
+    week: 3,
+    title: "EDA & Visualisasi Data",
+    subtitle: "Data Collection, Cleaning, Transformation",
+    icon: "📈",
+    color: "#58b8f0",
+    gradient: "from-sky-500/20 to-blue-600/20",
+    topics: ["Exploratory Data Analysis", "Statistics", "Data Cleaning", "Data Transformation"],
+    category: "data",
+  },
+  {
+    slug: "feature-engineering",
+    week: 4,
+    title: "Feature Engineering",
+    subtitle: "Feature Selection, Creation, Encoding",
+    icon: "🔧",
+    color: "#a68df8",
+    gradient: "from-violet-500/20 to-purple-600/20",
+    topics: ["Feature Selection", "Feature Creation", "Encoding", "Scaling & Normalization"],
+    category: "data",
+  },
+  {
+    slug: "pca",
+    week: 4,
+    title: "PCA",
+    subtitle: "Dimensionality Reduction, Principal Components",
+    icon: "📐",
+    color: "#f76c82",
+    gradient: "from-rose-500/20 to-pink-600/20",
+    topics: ["Dimensionality Reduction", "Eigenvalues & Eigenvectors", "Principal Components", "Variance Explained"],
+    category: "data",
+  },
+  {
+    slug: "cart",
+    week: 5,
+    title: "CART",
+    subtitle: "Classification & Regression Tree",
+    icon: "🌳",
+    color: "#4ade80",
+    gradient: "from-green-500/20 to-emerald-600/20",
+    topics: ["Decision Tree Structure", "Gini Impurity", "Information Gain", "Pruning"],
+    category: "models",
+  },
+  {
+    slug: "random-forest",
+    week: 5,
+    title: "Random Forest",
+    subtitle: "Ensemble Learning, Bagging",
+    icon: "🌲",
+    color: "#22c55e",
+    gradient: "from-emerald-500/20 to-green-600/20",
+    topics: ["Ensemble Methods", "Bagging", "Feature Randomness", "Out-of-Bag Error"],
+    category: "models",
+  },
+  {
+    slug: "model-evaluation",
+    week: 6,
+    title: "Evaluasi Model",
+    subtitle: "Metrics, Confusion Matrix, ROC",
+    icon: "📋",
+    color: "#fbbf24",
+    gradient: "from-yellow-500/20 to-amber-600/20",
+    topics: ["Confusion Matrix", "Accuracy, Precision, Recall", "F1-Score", "ROC & AUC"],
+    category: "evaluation",
+  },
+  {
+    slug: "bias-variance",
+    week: 6,
+    title: "Bias-Variance Tradeoff",
+    subtitle: "Underfitting, Overfitting, Generalization",
+    icon: "⚖️",
+    color: "#f97316",
+    gradient: "from-orange-500/20 to-red-600/20",
+    topics: ["Bias vs Variance", "Underfitting", "Overfitting", "Model Complexity"],
+    category: "evaluation",
+  },
+  {
+    slug: "knn",
+    week: 6,
+    title: "K-Nearest Neighbors",
+    subtitle: "Classification & Regression",
+    icon: "📍",
+    color: "#06b6d4",
+    gradient: "from-cyan-500/20 to-teal-600/20",
+    topics: ["Distance Metrics", "K Selection", "Classification", "Regression"],
+    category: "models",
+  },
+  {
+    slug: "imbalanced",
+    week: 7,
+    title: "Imbalanced Classification",
+    subtitle: "Oversampling, Undersampling, SMOTE",
+    icon: "⚠️",
+    color: "#ef4444",
+    gradient: "from-red-500/20 to-rose-600/20",
+    topics: ["Class Imbalance Problem", "Oversampling & Undersampling", "SMOTE", "Evaluation for Imbalanced Data"],
+    category: "evaluation",
+  },
+];
+
+export const CATEGORIES = {
+  foundations: { label: "Foundations", icon: "🧠", color: "#f0b440" },
+  data: { label: "Data & Preprocessing", icon: "📊", color: "#45d4c8" },
+  models: { label: "Models & Algorithms", icon: "⚙️", color: "#4ade80" },
+  evaluation: { label: "Evaluation", icon: "📋", color: "#fbbf24" },
+};
