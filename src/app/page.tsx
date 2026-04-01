@@ -138,6 +138,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p style={{ fontSize: 12, color: t.textDim, marginTop: 16 }}>by{" "}
+            <a href="https://www.instagram.com/ghanyrasyid_/" target="_blank" rel="noopener noreferrer" style={{ color: t.textMuted, textDecoration: "none", fontWeight: 500, borderBottom: `1px dotted ${t.textDim}` }}>Ghany Rasyid</a>
+          </p>
         </div>
       </header>
 
@@ -209,9 +212,6 @@ export default function Home() {
       <footer style={{ borderTop: `1px solid ${t.border}`, padding: "28px 24px", textAlign: "center" }}>
         <p style={{ color: t.footerText, fontSize: 13 }}>CSGE603130 — Kecerdasan Artifisial dan Sains Data Dasar</p>
         <p style={{ color: t.footerText, fontSize: 11, marginTop: 4, opacity: 0.7 }}>Fakultas Ilmu Komputer · Universitas Indonesia · Genap 2025/2026</p>
-        <p style={{ color: t.footerText, fontSize: 11, marginTop: 10, opacity: 0.45 }}>by{" "}
-          <a href="https://www.instagram.com/ghanyrasyid_/" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none", borderBottom: "1px dotted currentColor" }}>Ghany Rasyid</a>
-        </p>
       </footer>
     </div>
   );
