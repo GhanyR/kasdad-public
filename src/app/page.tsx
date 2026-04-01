@@ -124,7 +124,8 @@ export default function Home() {
           </h1>
           <p style={{ color: t.textMuted, fontSize: 16, maxWidth: 560, lineHeight: 1.7, marginBottom: 24 }}>
             Visualisasi interaktif materi kuliah — dari AI fundamentals,
-            search algorithms, data science, hingga machine learning models.
+            search algorithms, data science, hingga machine learning models. by{" "}
+            <a href="https://www.instagram.com/ghanyrasyid_/" target="_blank" rel="noopener noreferrer" style={{ color: t.textMuted, textDecoration: "none" }}>Ghany</a>
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             {[
@@ -138,9 +139,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: t.textDim, marginTop: 16 }}>by{" "}
-            <a href="https://www.instagram.com/ghanyrasyid_/" target="_blank" rel="noopener noreferrer" style={{ color: t.textMuted, textDecoration: "none", fontWeight: 500, borderBottom: `1px dotted ${t.textDim}` }}>Ghany Rasyid</a>
-          </p>
         </div>
       </header>
 
